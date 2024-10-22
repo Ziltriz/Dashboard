@@ -23,6 +23,7 @@ class Post(models.Model):
     date_posted = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(UserClass, on_delete=models.CASCADE)
     rating= models.IntegerField(default=0)
+    type = models.CharField(max_length=20)
 
     def __str__(self):
         return self.title
